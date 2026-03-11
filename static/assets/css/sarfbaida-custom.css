@@ -1,0 +1,216 @@
+/* ---------------------------------------------------------------------------
+   SARFBAIDA - Custom Overrides
+   Design amélioré - Cartes agences + bouton WhatsApp
+--------------------------------------------------------------------------- */
+
+/* Cartes Agences - Design premium */
+#blog.agence-section.bg-light {
+    background: linear-gradient(180deg, #f8f9fa 0%, #eef1f5 100%) !important;
+}
+
+#blog .row.g-4 {
+    --bs-gutter-y: 1.5rem;
+}
+
+#blog .features-left.border-dark-l {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff;
+    border: none !important;
+    float: none !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+#blog .features-left.border-dark-l:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+}
+
+#blog .features-left .feature {
+    float: none !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image complète - tban kamla fi responsive (sans crop) */
+#blog .feature img.img-fluid {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: #fff;
+}
+
+#blog .feature .feature-details.allpadding-sm {
+    padding: 1.35rem 1.5rem !important;
+}
+
+#blog .feature .feature-details h2 {
+    color: #1a237e;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+
+#blog .feature .feature-details h4 {
+    color: #5c6bc0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#blog .feature .feature-details p {
+    color: #546e7a;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Liens Agence - Design moderne */
+.agence-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.agence-contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.agence-maps-link {
+    background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.agence-maps-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+    color: #fff !important;
+}
+
+.agence-whatsapp-link {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.agence-whatsapp-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    color: #fff !important;
+}
+
+.agence-phone-link {
+    background: linear-gradient(135deg, #37474f 0%, #263238 100%);
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(55, 71, 79, 0.3);
+}
+
+.agence-phone-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(55, 71, 79, 0.4);
+    color: #fff !important;
+}
+
+/* Bouton WhatsApp flottant - fixe en bas à droite */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float a:hover {
+    background: #20bd5a;
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive - Image kamla + design adapté */
+@media (max-width: 768px) {
+    #blog .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+    
+    #blog .feature img.img-fluid {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    #blog .feature .feature-details.allpadding-sm {
+        padding: 1.2rem !important;
+    }
+    
+    .agence-contact-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .agence-contact-links a {
+        flex: 1;
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    #blog .feature img.img-fluid {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .agence-contact-links {
+        flex-direction: column;
+    }
+    
+    .agence-contact-links a {
+        min-width: 100%;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
