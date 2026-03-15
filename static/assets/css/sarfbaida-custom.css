@@ -45,42 +45,42 @@
     flex-direction: column;
 }
 
+/* Image agence - l-photo bayna 100% + m9adin (nafs l-hauteur l kol) */
 #blog .feature img.img-fluid {
     width: 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
     display: block;
-    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
     object-position: center;
-    aspect-ratio: 1 / 1;
-    background: #f0f0f0;
+    background: #f5f5f5;
     border-radius: 16px 16px 0 0;
 }
 
-/* Desktop: image kbira 100% */
+/* Desktop: bayna 100% + m9adin */
 @media (min-width: 992px) {
     #blog .feature img.img-fluid {
         aspect-ratio: 16 / 10;
-        min-height: 320px;
+        object-fit: contain;
     }
 }
 
-/* Tablette */
+/* Tablette: bayna 100% + m9adin */
 @media (min-width: 768px) and (max-width: 991px) {
     #blog .feature img.img-fluid {
-        aspect-ratio: 1 / 1;
-        min-height: 300px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
     }
 }
 
-/* Mobile: 100% width w hauteur mremda */
+/* Mobile: bayna 100% + m9adin */
 @media (max-width: 767px) {
     #blog .feature img.img-fluid {
         width: 100% !important;
         min-width: 100% !important;
-        aspect-ratio: 1 / 1;
-        min-height: 280px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
     }
 }
 
