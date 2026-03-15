@@ -31,16 +31,57 @@
     float: none !important;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-/* Image complète - tban kamla fi responsive (sans crop) */
+#blog .feature > img.img-fluid {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+}
+
+/* Image agence - 100% full, ma tbanch seghira */
+#blog .features-left.border-dark-l {
+    display: flex;
+    flex-direction: column;
+}
+
 #blog .feature img.img-fluid {
-    border-radius: 16px 16px 0 0;
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
     display: block;
-    object-fit: contain;
-    background: #fff;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
+    background: #f0f0f0;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Desktop: image kbira 100% */
+@media (min-width: 992px) {
+    #blog .feature img.img-fluid {
+        aspect-ratio: 16 / 10;
+        min-height: 320px;
+    }
+}
+
+/* Tablette */
+@media (min-width: 768px) and (max-width: 991px) {
+    #blog .feature img.img-fluid {
+        aspect-ratio: 1 / 1;
+        min-height: 300px;
+    }
+}
+
+/* Mobile: 100% width w hauteur mremda */
+@media (max-width: 767px) {
+    #blog .feature img.img-fluid {
+        width: 100% !important;
+        min-width: 100% !important;
+        aspect-ratio: 1 / 1;
+        min-height: 280px;
+    }
 }
 
 #blog .feature .feature-details.allpadding-sm {
@@ -156,16 +197,10 @@
     height: 32px;
 }
 
-/* Responsive - Image kamla + design adapté */
+/* Responsive - cartes et boutons */
 @media (max-width: 768px) {
     #blog .col-md-4 {
         margin-bottom: 1.5rem;
-    }
-    
-    #blog .feature img.img-fluid {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
     }
     
     #blog .feature .feature-details.allpadding-sm {
@@ -185,12 +220,6 @@
 }
 
 @media (max-width: 576px) {
-    #blog .feature img.img-fluid {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-    
     .agence-contact-links {
         flex-direction: column;
     }
